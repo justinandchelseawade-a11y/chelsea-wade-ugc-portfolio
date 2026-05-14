@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelsea Wade | UGC Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --coral: #E8735A;
+            --coral-light: #FCEEE9;
+            --sage: #7BAE7F;
+            --sage-light: #EAF4EB;
+            --warm-cream: #FFF8F3;
+            --warm-white: #FFFDFB;
+            --text-dark: #2D2A26;
+            --text-mid: #5C574F;
+            --text-light: #8A8480;
+            --peach: #F4A98A;
+            --lavender: #C4A8D4;
+            --lavender-light: #F3EDF7;
+            --gold: #D4A843;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--warm-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--coral) 0%, var(--peach) 50%, var(--lavender) 100%);
+            padding: 60px 24px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: white;
+            letter-spacing: 0.02em;
+            position: relative;
+        }
+
+        .hero .tagline {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.92);
+            margin-top: 8px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .hero .socials {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .hero .socials a {
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(8px);
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .hero .socials a:hover {
+            background: rgba(255,255,255,0.4);
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 56px 24px;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--coral);
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        /* ── ABOUT ── */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .about-text p {
+            color: var(--text-mid);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+
+        .credential-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .credential {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .credential .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--coral);
+        }
+
+        .credential .label {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-top: 4px;
+            line-height: 1.3;
+        }
+
+        /* ── PILLARS ── */
+        .pillars {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .pillar {
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .pillar:nth-child(1) { background: var(--coral-light); color: var(--coral); }
+        .pillar:nth-child(2) { background: var(--sage-light); color: var(--sage); }
+        .pillar:nth-child(3) { background: var(--lavender-light); color: var(--lavender); }
+        .pillar:nth-child(4) { background: #FFF3E0; color: var(--gold); }
+
+        /* ── CONTENT SAMPLES ── */
+        .samples-section {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            margin: 0 auto;
+            max-width: 960px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .video-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 9/16;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        /* ── VIDEO MODAL ── */
+        .video-modal {
+            border: none;
+            background: transparent;
+            padding: 0;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow: visible;
+        }
+
+        .video-modal::backdrop {
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        .video-modal video {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -48px;
+            right: 0;
+            background: transparent;
+            color: white;
+            border: none;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+        }
+
+        .modal-close:hover { opacity: 0.7; }
+
+        .video-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-card .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 12px 12px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+        }
+
+        .video-card .overlay .style-tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .video-card .overlay .title {
+            font-size: 0.8rem;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        /* ── AUDIENCE ── */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .stat-card .value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--coral);
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* ── BRANDS ── */
+        .brands-list {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .brand-tag {
+            background: white;
+            border: 1.5px solid #E8E4DF;
+            border-radius: 50px;
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            font-weight: 500;
+        }
+
+        .brand-tag span {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        /* ── CTA ── */
+        .cta-section {
+            background: linear-gradient(135deg, var(--coral) 0%, var(--peach) 100%);
+            border-radius: 24px;
+            padding: 56px 40px;
+            text-align: center;
+            max-width: 960px;
+            margin: 0 auto 56px;
+            color: white;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.05rem;
+            max-width: 500px;
+            margin: 0 auto 28px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover { transform: translateY(-2px); }
+
+        .cta-btn.primary {
+            background: white;
+            color: var(--coral);
+        }
+
+        .cta-btn.secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1.5px solid rgba(255,255,255,0.4);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .video-grid { grid-template-columns: repeat(3, 1fr); }
+            .audience-grid { grid-template-columns: repeat(2, 1fr); }
+            .samples-section { padding: 32px 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+            .credential-grid { grid-template-columns: 1fr; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .cta-section { padding: 40px 24px; }
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Chelsea Wade</h1>
+        <p class="tagline">UGC Creator &amp; Marketing Analyst | Homeschool Mom | AI-Native</p>
+        <div class="socials">
+            <a href="https://www.tiktok.com/@chelseacknox" target="_blank">TikTok @chelseacknox</a>
+            <a href="https://www.instagram.com/chelseacwade" target="_blank">Instagram @chelseacwade</a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section>
+        <div class="section-label">About Me</div>
+        <h2>Marketing Brain, Creator Heart</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a corporate marketing analyst, ADHD homeschool mom, and AI-native creator making content for women building intentional family lives without losing their ambition. I bring a warm, honest voice that connects with moms who care deeply about their families, their work, and the systems that hold it all together.</p>
+                <p>What sets me apart: not only do I create content daily, I also stay on top of current social media and AI trends every day. With a marketing degree (cum laude), a corporate marketing analyst day job, and a research practice covering 160+ social profiles quarterly, I understand what makes content perform, not just what makes it look pretty. Every piece of brand content is filmed, voiced, and edited by me, start to finish.</p>
+                <div class="pillars">
+                    <span class="pillar">Homeschooling</span>
+                    <span class="pillar">Motherhood</span>
+                    <span class="pillar">AI + Tech</span>
+                    <span class="pillar">WFH Life</span>
+                </div>
+            </div>
+            <div class="credential-grid">
+                <div class="credential">
+                    <div class="number">160+</div>
+                    <div class="label">Social profiles analyzed quarterly</div>
+                </div>
+                <div class="credential">
+                    <div class="number">5-7x</div>
+                    <div class="label">Posts per week across platforms</div>
+                </div>
+                <div class="credential">
+                    <div class="number">AI</div>
+                    <div class="label">Native &amp; fluent in current AI tools</div>
+                </div>
+                <div class="credential">
+                    <div class="number">Daily</div>
+                    <div class="label">Trend, hook &amp; format research</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SAMPLES -->
+    <section>
+        <div class="samples-section">
+            <div class="section-label">Content Samples</div>
+            <h2>My Content in Action</h2>
+            <p style="color: var(--text-mid); margin-bottom: 8px;">Click any video to watch. Styles include brand collabs, talking head, text overlay, storytelling, day-in-the-life, and series content.</p>
+            <div class="video-grid">
+                <a class="video-card" href="#trubite" onclick="event.preventDefault(); document.getElementById('trubite-modal').showModal();">
+                    <img src="thumbnails/trubite.jpg" alt="TruBite UGC Sample">
+                    <div class="overlay">
+                        <span class="style-tag">UGC Sample</span>
+                        <div class="title">TruBite</div>
+                    </div>
+                </a>
+                <a class="video-card" href="https://www.tiktok.com/@chelseacknox/video/7569972560289385741" target="_blank" rel="noopener">
+                    <img src="thumbnails/3 Reasons Why Homeschool.jpg" alt="3 Reasons Why Homeschool">
+                    <div class="overlay">
+                        <span class="style-tag">Talking Head</span>
+                        <div class="title">3 Reasons Why Homeschool</div>
+                    </div>
+                </a>
+                <a class="video-card" href="https://www.tiktok.com/@chelseacknox/video/7566367562804579639" target="_blank" rel="noopener">
+                    <img src="thumbnails/Curriculum Overview - Day in the Life.jpg" alt="Curriculum Overview">
+                    <div class="overlay">
+                        <span class="style-tag">Day in the Life</span>
+                        <div class="title">Curriculum Overview</div>
+                    </div>
+                </a>
+                <a class="video-card" href="https://www.tiktok.com/@chelseacknox/video/7566282110613359927" target="_blank" rel="noopener">
+                    <img src="thumbnails/Curriculum Overview.jpg" alt="Co-Op Day">
+                    <div class="overlay">
+                        <span class="style-tag">Series</span>
+                        <div class="title">Day 7, Co-Op Day</div>
+                    </div>
+                </a>
+                <a class="video-card" href="https://www.tiktok.com/@chelseacknox/video/7567848361571749175" target="_blank" rel="noopener">
+                    <img src="thumbnails/Series - Homeschool.jpg" alt="Day 10 of Homeschooling">
+                    <div class="overlay">
+                        <span class="style-tag">Car Vlog</span>
+                        <div class="title">Day 10 of Homeschooling</div>
+                    </div>
+                </a>
+                <a class="video-card" href="https://www.tiktok.com/@chelseacknox/video/7563100196477947150" target="_blank" rel="noopener">
+                    <img src="thumbnails/Text layover.jpg" alt="Setting Up Homeschool Space">
+                    <div class="overlay">
+                        <span class="style-tag">Text Overlay</span>
+                        <div class="title">Setting Up Our Space</div>
+                    </div>
+                </a>
+                <a class="video-card" href="https://www.tiktok.com/@chelseacknox/video/7568230757940972813" target="_blank" rel="noopener">
+                    <img src="thumbnails/Text on Screen.jpg" alt="Micro Habits">
+                    <div class="overlay">
+                        <span class="style-tag">List Style</span>
+                        <div class="title">3 Micro Habits</div>
+                    </div>
+                </a>
+                <a class="video-card" href="https://www.tiktok.com/@chelseacknox/video/7568578915116141838" target="_blank" rel="noopener">
+                    <img src="thumbnails/text on screen .jpg" alt="POV Storytelling">
+                    <div class="overlay">
+                        <span class="style-tag">POV / Story</span>
+                        <div class="title">POV: Life Update</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section>
+        <div class="section-label">Audience</div>
+        <h2>Who's Watching</h2>
+        <div class="audience-grid">
+            <div class="stat-card">
+                <div class="value">26.7K</div>
+                <div class="stat-label">TikTok Followers</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">4.6%</div>
+                <div class="stat-label">Engagement Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">83.9K</div>
+                <div class="stat-label">Monthly Impressions</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">93%</div>
+                <div class="stat-label">Female Audience</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">75%</div>
+                <div class="stat-label">Age 25-44</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">66.8%</div>
+                <div class="stat-label">US-Based</div>
+            </div>
+        </div>
+        <p style="color: var(--text-light); font-size: 0.82rem; margin-top: 16px; text-align: center;">Based in Newnan, GA. Top cities: Dallas, Houston, Chicago, Atlanta. Audience age skews 35-44 (49.7%) + 25-34 (25.7%).</p>
+    </section>
+
+    <!-- BRANDS -->
+    <section>
+        <div class="section-label">Brand Experience</div>
+        <h2>Brands I've Worked With</h2>
+        <div class="brands-list">
+            <div class="brand-tag">StarSpark Math AI Tutor <span>Paid Partnership</span></div>
+            <div class="brand-tag">Open for new partnerships <span>let's collab</span></div>
+        </div>
+        <p style="color: var(--text-light); font-size: 0.88rem; margin-top: 16px;">Currently open to partnerships in education, AI tools, WFH/productivity, motherhood, and homeschool spaces.</p>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Let's Create Together</h2>
+        <p>I'd love to bring your brand to life with authentic, strategy-driven content that connects with moms who care.</p>
+        <div class="cta-buttons">
+            <a href="mailto:chelseacknox@gmail.com" class="cta-btn primary">Email Me</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Chelsea Wade. All rights reserved.
+    </footer>
+
+    <!-- TRUBITE VIDEO MODAL -->
+    <dialog id="trubite-modal" class="video-modal">
+        <button class="modal-close" aria-label="Close" onclick="document.getElementById('trubite-modal').close()">&times;</button>
+        <video controls playsinline src="videos/trubite.mp4"></video>
+    </dialog>
+
+    <script>
+        (function() {
+            const modal = document.getElementById('trubite-modal');
+            const video = modal.querySelector('video');
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) modal.close();
+            });
+            modal.addEventListener('close', function() {
+                video.pause();
+                video.currentTime = 0;
+            });
+        })();
+    </script>
+
+</body>
+</html>
