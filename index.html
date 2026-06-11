@@ -51,6 +51,19 @@
             background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
         }
 
+        .hero .hero-photo {
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 50% 18%;
+            border: 4px solid rgba(255,255,255,0.85);
+            box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+            margin: 0 auto 22px;
+            display: block;
+            position: relative;
+        }
+
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
@@ -177,6 +190,76 @@
         .pillar:nth-child(3) { background: var(--lavender-light); color: var(--lavender); }
         .pillar:nth-child(4) { background: #FFF3E0; color: var(--gold); }
 
+        /* ── PROVEN RESULTS ── */
+        .results-section {
+            background: linear-gradient(135deg, var(--sage-light) 0%, var(--lavender-light) 100%);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 18px;
+            padding: 26px;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .result-card .metric {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--coral);
+        }
+
+        .result-card .metric-label {
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-top: 6px;
+        }
+
+        .result-card .result-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 14px;
+            color: var(--text-dark);
+        }
+
+        .result-card .result-why {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            margin-top: 6px;
+            flex-grow: 1;
+        }
+
+        .result-card .watch-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--coral);
+            text-decoration: none;
+            margin-top: 16px;
+        }
+
+        .result-card .watch-link:hover { text-decoration: underline; }
+
+        .result-card:nth-child(2) .metric { color: var(--sage); }
+        .result-card:nth-child(3) .metric { color: var(--lavender); }
+        .result-card:nth-child(4) .metric { color: var(--gold); }
+
         /* ── CONTENT SAMPLES ── */
         .samples-section {
             background: white;
@@ -228,6 +311,17 @@
             max-width: 100%;
             max-height: 90vh;
             border-radius: 12px;
+            display: block;
+        }
+
+        .video-modal iframe {
+            width: 325px;
+            height: 745px;
+            max-width: 92vw;
+            max-height: 88vh;
+            border: none;
+            border-radius: 12px;
+            background: #000;
             display: block;
         }
 
@@ -334,6 +428,56 @@
             font-weight: 400;
         }
 
+        /* ── RATES ── */
+        .rates-section { max-width: 960px; margin: 0 auto; }
+
+        .rate-group { margin-top: 28px; }
+
+        .rate-group h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .rate-group .rate-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .rate-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .rate-table td {
+            padding: 12px 18px;
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            border-bottom: 1px solid #F2EEE9;
+        }
+
+        .rate-table tr:last-child td { border-bottom: none; }
+
+        .rate-table td.price {
+            text-align: right;
+            font-weight: 700;
+            color: var(--coral);
+            white-space: nowrap;
+        }
+
+        .rate-terms {
+            font-size: 0.84rem;
+            color: var(--text-light);
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+
         /* ── CTA ── */
         .cta-section {
             background: linear-gradient(135deg, var(--coral) 0%, var(--peach) 100%);
@@ -391,6 +535,7 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .about-content { grid-template-columns: 1fr; }
+            .results-grid { grid-template-columns: 1fr; }
             .video-grid { grid-template-columns: repeat(3, 1fr); }
             .audience-grid { grid-template-columns: repeat(2, 1fr); }
             .samples-section { padding: 32px 20px; }
@@ -416,6 +561,7 @@
 
     <!-- HERO -->
     <header class="hero">
+        <img class="hero-photo" src="headshot.jpeg" alt="Chelsea Wade headshot">
         <h1>Chelsea Wade</h1>
         <p class="tagline">UGC Creator &amp; Marketing Analyst | Homeschool Mom | AI-Native</p>
         <div class="socials">
@@ -461,6 +607,51 @@
         </div>
     </section>
 
+    <!-- PROVEN RESULTS -->
+    <section>
+        <div class="results-section">
+            <div class="section-label">Proven Results</div>
+            <h2>Content That Performs &mdash; and Sells</h2>
+            <p style="color: var(--text-mid); margin-bottom: 4px;">Real numbers from my own TikTok. I don't just make content that looks good &mdash; I make content that reaches the right moms and gets them to act.</p>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="metric">108K</div>
+                    <div class="metric-label">Views &middot; one video</div>
+                    <div class="result-title">"3 Things I Wish I Knew Before Homeschooling"</div>
+                    <div class="result-why">Went viral in my exact niche &mdash; proof I can put a brand in front of 100K+ engaged homeschool moms.</div>
+                    <a class="watch-link" href="https://www.tiktok.com/@chelseacknox/video/7569972560289385741" target="_blank" rel="noopener">Watch on TikTok &rarr;</a>
+                </div>
+                <div class="result-card">
+                    <div class="metric">6.8%</div>
+                    <div class="metric-label">Engagement rate</div>
+                    <div class="result-title">"Use AI as Your Homeschool Assistant"</div>
+                    <div class="result-why">A product-focused video that beat my 4.6% average &mdash; my audience leans in when I talk tools, exactly what edtech and AI brands want to see.</div>
+                    <a class="watch-link" href="https://www.tiktok.com/@chelseacknox/video/7625375283452988685" target="_blank" rel="noopener">Watch on TikTok &rarr;</a>
+                </div>
+                <div class="result-card">
+                    <div class="metric">5.2%</div>
+                    <div class="metric-label">Engagement rate</div>
+                    <div class="result-title">"How to Keep Your Homeschooler on Grade Level"</div>
+                    <div class="result-why">An educational how-to with a built-in product slot &mdash; a curriculum, assessment, or tracking tool drops straight into this format.</div>
+                    <a class="watch-link" href="https://www.tiktok.com/@chelseacknox/video/7570425738885696823" target="_blank" rel="noopener">Watch on TikTok &rarr;</a>
+                </div>
+                <div class="result-card">
+                    <div class="metric">2.9K</div>
+                    <div class="metric-label">Views &middot; brand integration</div>
+                    <div class="result-title">Teaching Textbooks, organically featured</div>
+                    <div class="result-why">A real curriculum woven into an honest review, with a free-trial link in my bio &mdash; proof I create product content that converts, not just impressions.</div>
+                    <a class="watch-link" href="https://www.tiktok.com/@chelseacknox/video/7633583411990449421" target="_blank" rel="noopener">Watch on TikTok &rarr;</a>
+                </div>
+                <div class="result-card">
+                    <div class="metric">51</div>
+                    <div class="metric-label">Referral clicks &middot; past few weeks</div>
+                    <div class="result-title">Money tools my audience actually clicks</div>
+                    <div class="result-why">I sent 51 people to a side-hustle platform through my referral link in just a few weeks &mdash; proof my audience trusts my money recommendations enough to click and act, not just watch.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTENT SAMPLES -->
     <section>
         <div class="samples-section">
@@ -473,6 +664,27 @@
                     <div class="overlay">
                         <span class="style-tag">UGC Sample</span>
                         <div class="title">TruBite</div>
+                    </div>
+                </a>
+                <a class="video-card" href="#" onclick="event.preventDefault(); openTikTok('7625375283452988685');">
+                    <img src="thumbnails/ai-assistant.jpg" alt="Use AI as Your Homeschool Assistant">
+                    <div class="overlay">
+                        <span class="style-tag">AI / Tool Demo</span>
+                        <div class="title">AI Homeschool Assistant</div>
+                    </div>
+                </a>
+                <a class="video-card" href="#" onclick="event.preventDefault(); openTikTok('7633583411990449421');">
+                    <img src="thumbnails/teaching-textbooks.jpg" alt="Teaching Textbooks review">
+                    <div class="overlay">
+                        <span class="style-tag">Brand Integration</span>
+                        <div class="title">Teaching Textbooks</div>
+                    </div>
+                </a>
+                <a class="video-card" href="#" onclick="event.preventDefault(); openTikTok('7570425738885696823');">
+                    <img src="thumbnails/grade-level.jpg" alt="How to keep your homeschooler on grade level">
+                    <div class="overlay">
+                        <span class="style-tag">How-To</span>
+                        <div class="title">Staying on Grade Level</div>
                     </div>
                 </a>
                 <a class="video-card" href="https://www.tiktok.com/@chelseacknox/video/7569972560289385741" target="_blank" rel="noopener">
@@ -534,7 +746,7 @@
         <h2>Who's Watching</h2>
         <div class="audience-grid">
             <div class="stat-card">
-                <div class="value">26.7K</div>
+                <div class="value">36.2K</div>
                 <div class="stat-label">TikTok Followers</div>
             </div>
             <div class="stat-card">
@@ -542,8 +754,8 @@
                 <div class="stat-label">Engagement Rate</div>
             </div>
             <div class="stat-card">
-                <div class="value">83.9K</div>
-                <div class="stat-label">Monthly Impressions</div>
+                <div class="value">3M+</div>
+                <div class="stat-label">Views &middot; Last 30 Days</div>
             </div>
             <div class="stat-card">
                 <div class="value">93%</div>
@@ -567,9 +779,58 @@
         <h2>Brands I've Worked With</h2>
         <div class="brands-list">
             <div class="brand-tag">StarSpark Math AI Tutor <span>Paid Partnership</span></div>
+            <div class="brand-tag">IEW &ndash; Institute for Excellence in Writing <span>Organic Content</span></div>
+            <div class="brand-tag">Teaching Textbooks <span>Organic Content</span></div>
             <div class="brand-tag">Open for new partnerships <span>let's collab</span></div>
         </div>
         <p style="color: var(--text-light); font-size: 0.88rem; margin-top: 16px;">Currently open to partnerships in education, AI tools, WFH/productivity, motherhood, and homeschool spaces.</p>
+    </section>
+
+    <!-- RATES -->
+    <section>
+        <div class="rates-section">
+            <div class="section-label">Services &amp; Rates</div>
+            <h2>Work With Me</h2>
+            <p style="color: var(--text-mid);">Transparent pricing so we can move fast. All rates are negotiable based on scope, timeline, and long-term partnership potential.</p>
+
+            <div class="rate-group">
+                <h3>Sponsored Content</h3>
+                <div class="rate-note">Posted to my channels with brand tagging &amp; disclosure.</div>
+                <table class="rate-table">
+                    <tr><td>TikTok Video (15&ndash;60s, 1 revision)</td><td class="price">$400</td></tr>
+                    <tr><td>Instagram Reel (scripted or organic)</td><td class="price">$350&ndash;$450</td></tr>
+                    <tr><td>Instagram Collab Reel (co-branded)</td><td class="price">$400&ndash;$500</td></tr>
+                    <tr><td>Instagram Story Set (3 frames)</td><td class="price">$150&ndash;$200</td></tr>
+                    <tr><td>Instagram Feed Post (static or carousel)</td><td class="price">$250&ndash;$350</td></tr>
+                </table>
+            </div>
+
+            <div class="rate-group">
+                <h3>UGC Content Creation</h3>
+                <div class="rate-note">Created for your brand to use on your channels. Organic usage rights included.</div>
+                <table class="rate-table">
+                    <tr><td>UGC Video &mdash; Single (15&ndash;60s)</td><td class="price">$225</td></tr>
+                    <tr><td>UGC Standard Package (2 videos + 3 photos)</td><td class="price">$375</td></tr>
+                    <tr><td>UGC Premium Package (3 videos + 5 photos)</td><td class="price">$575</td></tr>
+                    <tr><td>UGC Photo Set (5 lifestyle images)</td><td class="price">$175&ndash;$250</td></tr>
+                </table>
+            </div>
+
+            <div class="rate-group">
+                <h3>Bundle Packages</h3>
+                <div class="rate-note">Discounted for multi-deliverable partnerships.</div>
+                <table class="rate-table">
+                    <tr><td>Starter &mdash; 1 Reel or TikTok + 3 Stories</td><td class="price">$500&ndash;$550</td></tr>
+                    <tr><td>Content Creator &mdash; 1 Reel + 1 TikTok + 3 Stories + 1 Post</td><td class="price">$1,000&ndash;$1,200</td></tr>
+                    <tr><td>Full Funnel &mdash; 2 Reels/TikToks + 3 Stories + 2 UGC videos</td><td class="price">$1,200&ndash;$1,400</td></tr>
+                    <tr><td>Monthly Retainer &mdash; 4 Reels/TikToks + 8 Stories</td><td class="price">$1,600&ndash;$2,000/mo</td></tr>
+                </table>
+            </div>
+
+            <p class="rate-terms">
+                <strong>Terms:</strong> 1 revision per deliverable &middot; 5&ndash;10 business day turnaround &middot; 50% deposit on agreement. Organic usage rights included; paid-ad usage, whitelisting / Spark Ads, and perpetual buyouts available as add-ons. Affiliate partnerships welcome but don't replace creator fees.
+            </p>
+        </div>
     </section>
 
     <!-- CTA -->
@@ -591,6 +852,12 @@
         <video controls playsinline src="videos/trubite.mp4"></video>
     </dialog>
 
+    <!-- TIKTOK EMBED MODAL -->
+    <dialog id="tiktok-modal" class="video-modal">
+        <button class="modal-close" aria-label="Close" onclick="closeTikTok()">&times;</button>
+        <iframe id="tiktok-frame" src="" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+    </dialog>
+
     <script>
         (function() {
             const modal = document.getElementById('trubite-modal');
@@ -601,6 +868,23 @@
             modal.addEventListener('close', function() {
                 video.pause();
                 video.currentTime = 0;
+            });
+        })();
+
+        // TikTok embed modal — plays inline, no download, keeps real view counts
+        function openTikTok(videoId) {
+            var frame = document.getElementById('tiktok-frame');
+            frame.src = 'https://www.tiktok.com/embed/v2/' + videoId;
+            document.getElementById('tiktok-modal').showModal();
+        }
+        function closeTikTok() {
+            document.getElementById('tiktok-frame').src = '';
+            document.getElementById('tiktok-modal').close();
+        }
+        (function() {
+            var ttModal = document.getElementById('tiktok-modal');
+            ttModal.addEventListener('click', function(e) {
+                if (e.target === ttModal) closeTikTok();
             });
         })();
     </script>
