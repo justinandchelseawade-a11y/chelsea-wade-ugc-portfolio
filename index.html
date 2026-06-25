@@ -105,6 +105,39 @@
             background: rgba(255,255,255,0.4);
         }
 
+        .hero .hero-stats {
+            margin: 24px auto 4px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .hero .hero-stat {
+            background: rgba(255,255,255,0.18);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 12px 22px;
+            min-width: 108px;
+        }
+
+        .hero .hero-stat .num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+        }
+
+        .hero .hero-stat .lbl {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.88);
+            margin-top: 6px;
+        }
+
         /* ── SECTIONS ── */
         section {
             max-width: 960px;
@@ -563,7 +596,12 @@
     <header class="hero">
         <img class="hero-photo" src="headshot.jpeg" alt="Chelsea Wade headshot">
         <h1>Chelsea Wade</h1>
-        <p class="tagline">UGC Creator &amp; Marketing Analyst | Homeschool Mom | AI-Native</p>
+        <p class="tagline">Creator + Marketing Strategist | Tech &amp; AI &middot; Homeschooling &middot; Side Hustles</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><div class="num">38,200</div><div class="lbl">Followers</div></div>
+            <div class="hero-stat"><div class="num">3M+</div><div class="lbl">Views / Viral Week</div></div>
+            <div class="hero-stat"><div class="num">700+</div><div class="lbl">Products Sold</div></div>
+        </div>
         <div class="socials">
             <a href="https://www.tiktok.com/@chelseacknox" target="_blank">TikTok @chelseacknox</a>
             <a href="https://www.instagram.com/chelseacwade" target="_blank">Instagram @chelseacwade</a>
@@ -577,13 +615,13 @@
         <h2>Marketing Brain, Creator Heart</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I'm a corporate marketing analyst, ADHD homeschool mom, and AI-native creator making content for women building intentional family lives without losing their ambition. I bring a warm, honest voice that connects with moms who care deeply about their families, their work, and the systems that hold it all together.</p>
-                <p>What sets me apart: not only do I create content daily, I also stay on top of current social media and AI trends every day. With a marketing degree (cum laude), a corporate marketing analyst day job, and a research practice covering 160+ social profiles quarterly, I understand what makes content perform, not just what makes it look pretty. Every piece of brand content is filmed, voiced, and edited by me, start to finish.</p>
+                <p>I'm a creator with a marketing strategist's brain &mdash; an ADHD homeschool mom who makes honest, scroll-stopping content for women building flexible, multi-income lives without losing their ambition. I connect with an audience that cares deeply about their families, their work, and the tools that hold it all together.</p>
+                <p>What sets me apart: I think like a marketer, not just a creator. I've built my own business and sold 700+ copies of my own digital product in under a month, so I understand the whole funnel from hook to checkout. With a marketing degree (cum laude) and a research practice covering 160+ social profiles quarterly, I know what makes content perform, not just what makes it look pretty. Every piece of brand content is filmed, voiced, and edited by me, start to finish.</p>
                 <div class="pillars">
                     <span class="pillar">Homeschooling</span>
-                    <span class="pillar">Motherhood</span>
-                    <span class="pillar">AI + Tech</span>
-                    <span class="pillar">WFH Life</span>
+                    <span class="pillar">AI &amp; Tech</span>
+                    <span class="pillar">Side Hustles &amp; Income</span>
+                    <span class="pillar">Flexible Living</span>
                 </div>
             </div>
             <div class="credential-grid">
@@ -597,7 +635,7 @@
                 </div>
                 <div class="credential">
                     <div class="number">AI</div>
-                    <div class="label">Native &amp; fluent in current AI tools</div>
+                    <div class="label">Fluent in the AI &amp; tech tools brands want reviewed</div>
                 </div>
                 <div class="credential">
                     <div class="number">Daily</div>
@@ -615,10 +653,10 @@
             <p style="color: var(--text-mid); margin-bottom: 4px;">Real numbers from my own TikTok. I don't just make content that looks good &mdash; I make content that reaches the right moms and gets them to act.</p>
             <div class="results-grid">
                 <div class="result-card">
-                    <div class="metric">544</div>
+                    <div class="metric">700+</div>
                     <div class="metric-label">Copies sold &middot; my own product</div>
                     <div class="result-title">I don't just post &mdash; I sell</div>
-                    <div class="result-why">544 paid copies of my own digital product, sold to my own audience. The hardest thing a creator can prove to a brand: that people don't just watch me, they buy what I recommend.</div>
+                    <div class="result-why">700+ paid copies of my own digital product, sold to my own audience in under a month. The hardest thing a creator can prove to a brand: that people don't just watch me, they buy what I recommend.</div>
                 </div>
                 <div class="result-card">
                     <div class="metric">108K</div>
@@ -703,7 +741,7 @@
         <h2>Who's Watching</h2>
         <div class="audience-grid">
             <div class="stat-card">
-                <div class="value">36.2K</div>
+                <div class="value">38.2K</div>
                 <div class="stat-label">TikTok Followers</div>
             </div>
             <div class="stat-card">
@@ -740,7 +778,7 @@
             <div class="brand-tag">Teaching Textbooks <span>Organic Content</span></div>
             <div class="brand-tag">Open for new partnerships <span>let's collab</span></div>
         </div>
-        <p style="color: var(--text-light); font-size: 0.88rem; margin-top: 16px;">Currently open to partnerships in education, AI tools, WFH/productivity, motherhood, and homeschool spaces.</p>
+        <p style="color: var(--text-light); font-size: 0.88rem; margin-top: 16px;">Currently open to partnerships in AI &amp; tech, education, side hustle / finance, productivity, and homeschool spaces.</p>
     </section>
 
     <!-- RATES SECTION TEMPORARILY HIDDEN for the Monarch pitch. To restore, delete the TEMP-HIDE-START opener line below and the TEMP-HIDE-END closer line after the section. -->
